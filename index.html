@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment UPI Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Online Payment UPI Demo</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>Payment Details</h2>
+
+            <label>Amount (₹)</label>
+            <input type="number" id="amount" min="1" max="10000">
+            <small class="error" id="amountError"></small>
+
+            <label>Name</label>
+            <input type="text" id="name">
+            <small class="error" id="nameError"></small>
+
+            <label>Email or Mobile</label>
+            <input type="text" id="contact">
+            <small class="error" id="contactError"></small>
+
+            <h3>Select Payment Method</h3>
+
+            <div class="methods">
+
+                <label class="methodCard">
+                    <input type="radio" name="method" value="Debit Card"> 💳 Debit Card
+                </label>
+
+                <label class="methodCard">
+                    <input type="radio" name="method" value="Credit Card"> 💳 Credit Card
+                </label>
+
+                <label class="methodCard">
+                    <input type="radio" name="method" value="UPI"> 📲 UPI
+                </label>
+
+                <label class="methodCard">
+                    <input type="radio" name="method" value="Net Banking"> 🏦 Net Banking
+                </label>
+
+            </div>
+            <small class="error" id="methodError"></small>
+
+            <div id="cardSection" class="hidden">
+                <label>Card Number</label>
+                <input type="password" id="cardNumber" maxlength="16">
+                <small class="error" id="cardError"></small>
+
+                <label>Expiry</label>
+                <input type="month" id="expiry">
+
+                <label>CVV</label>
+                <input type="password" id="cvv" maxlength="3">
+                <small class="error" id="cvvError"></small>
+            </div>
+
+            <div id="upiSection" class="hidden">
+                <label>UPI ID</label>
+                <input type="text" id="upi">
+                <small class="error" id="upiError"></small>
+            </div>
+
+            <button id="payBtn">Pay Now</button>
+
+        </div>
+
+        <div class="card">
+            <h2>Payment Status</h2>
+            <div id="status"></div>
+            <div id="summary"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

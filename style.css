@@ -1,0 +1,99 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #eef2f7;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to right, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 380px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: grey;
+    cursor: not-allowed;
+}
+
+.methods {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.methodCard {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.methodCard.active {
+    border: 2px solid #16a34a;
+    background: #e6f9ec;
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    height: 14px;
+}
+
+#status {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media(max-width:768px) {
+    header h1 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+}
